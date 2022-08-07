@@ -27,6 +27,9 @@ namespace Methods
                 Console.WriteLine($"Sum of element is odd and equal: {oddSum}");
             else
                 Console.WriteLine("Sum of element is not odd");
+
+            Console.WriteLine("Extra task");
+            Console.WriteLine(Repeat("Qwe", 9));
             Console.ReadKey();
         }
 
@@ -72,6 +75,18 @@ namespace Methods
                 minNum++;
             }
             return sum;
+        }
+
+        static string Repeat(string str, int count)
+        {
+            if (count == 0 || str == null)
+            {
+                return "Invalid arguments";
+            }
+            if (count == 1)
+                return str;
+            else
+                return str + Repeat(str, count -1);
         }
     }
 
